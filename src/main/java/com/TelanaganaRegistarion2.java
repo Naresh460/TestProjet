@@ -182,8 +182,8 @@ public class TelanaganaRegistarion2 {
 		dateName = new SimpleDateFormat("dd-MM-YYYY-hhmmss").format(new Date());
 		Screenshot screenshot = new AShot().shootingStrategy(ShootingStrategies.viewportPasting(1500))
 				.takeScreenshot(driver);
-		file = new File(System.getProperty("user.dir") + "\\Screenshots\\EC-" + dateName + ".jpeg");
-		ImageIO.write(screenshot.getImage(), "JPEG", file);
+		file = new File(System.getProperty("user.dir") + "\\Screenshots\\EC-"+dateName+".png");
+		ImageIO.write(screenshot.getImage(), "png", file);
 		System.out.println("Screenshot taken");
 		return file.getAbsolutePath();
 		
