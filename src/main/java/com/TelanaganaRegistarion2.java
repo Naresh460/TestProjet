@@ -100,7 +100,7 @@ public class TelanaganaRegistarion2 {
 				System.out.println("********************Going to Screenshot***********...");
 				screenShot();
 				System.out.println("********************Going to Mail method***********...");
-				//sendEmail();
+				sendEmail();
 
 			}
 		}
