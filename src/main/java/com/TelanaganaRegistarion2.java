@@ -103,7 +103,7 @@ public class TelanaganaRegistarion2 {
 
 	}
 
-	public static void sendEmail() {
+	public void sendEmail() throws IOException {
 		
 		
 		String from = "bluebird.460@gmail.com";
@@ -155,8 +155,9 @@ public class TelanaganaRegistarion2 {
 			// 4) create new MimeBodyPart object and set DataHandler object to this object
 			MimeBodyPart messageBodyPart2 = new MimeBodyPart();
 
-			//String filename = "file"; // change accordingly
-			DataSource source = new FileDataSource(file);
+			String filename = screenShot(); // change accordingly
+			System.out.println("filename--->"+filename);
+			DataSource source = new FileDataSource(filename);
 			messageBodyPart2.setDataHandler(new DataHandler(source));
 			messageBodyPart2.setFileName(dateName);
 			
@@ -183,8 +184,10 @@ public class TelanaganaRegistarion2 {
 		Screenshot screenshot = new AShot().shootingStrategy(ShootingStrategies.viewportPasting(1500))
 				.takeScreenshot(driver);
 		file = new File(System.getProperty("user.dir") + "\\Screenshots\\EC-"+dateName+".png");
+		System.out.println("File path is-->"+file);
 		ImageIO.write(screenshot.getImage(), "png", file);
 		System.out.println("Screenshot taken");
+		System.out.println("File absolutepath--->"+file.getAbsolutePath());
 		return file.getAbsolutePath();
 		
 	}

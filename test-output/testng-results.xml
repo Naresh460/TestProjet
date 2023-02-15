@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-02-14T19:37:48 IST" name="Suite" finished-at="2023-02-14T19:38:54 IST" duration-ms="65988">
+  <suite started-at="2023-02-15T14:04:14 IST" name="Default suite" finished-at="2023-02-15T14:05:15 IST" duration-ms="61305">
     <groups>
     </groups>
-    <test started-at="2023-02-14T19:37:48 IST" name="Test" finished-at="2023-02-14T19:38:54 IST" duration-ms="65988">
+    <test started-at="2023-02-15T14:04:14 IST" name="Default test" finished-at="2023-02-15T14:05:15 IST" duration-ms="61305">
       <class name="com.TelanaganaRegistarion2">
-        <test-method signature="getEC()[pri:0, instance:com.TelanaganaRegistarion2@f0c8a99]" started-at="2023-02-14T19:37:48 IST" name="getEC" finished-at="2023-02-14T19:38:53 IST" duration-ms="65144" status="PASS">
+        <test-method signature="getEC()[pri:0, instance:com.TelanaganaRegistarion2@f0c8a99]" started-at="2023-02-15T14:04:14 IST" name="getEC" finished-at="2023-02-15T14:05:15 IST" duration-ms="60535" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getEC -->
-        <test-method is-config="true" signature="tearDDown()[pri:0, instance:com.TelanaganaRegistarion2@f0c8a99]" started-at="2023-02-14T19:38:53 IST" name="tearDDown" finished-at="2023-02-14T19:38:54 IST" duration-ms="795" status="PASS">
+        <test-method is-config="true" signature="tearDDown()[pri:0, instance:com.TelanaganaRegistarion2@f0c8a99]" started-at="2023-02-15T14:05:15 IST" name="tearDDown" finished-at="2023-02-15T14:05:15 IST" duration-ms="708" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDDown -->
       </class> <!-- com.TelanaganaRegistarion2 -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
