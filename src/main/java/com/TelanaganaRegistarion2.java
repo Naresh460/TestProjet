@@ -163,7 +163,7 @@ public class TelanaganaRegistarion2 {
 			System.out.println("filename--->"+filename);
 			DataSource source = new FileDataSource(filename);
 			messageBodyPart2.setDataHandler(new DataHandler(source));
-			messageBodyPart2.setFileName(dateName);
+			messageBodyPart2.setFileName(dateName+".png");
 			
 			// 5) create Multipart object and add MimeBodyPart objects to this object
 			Multipart multipart = new MimeMultipart();
