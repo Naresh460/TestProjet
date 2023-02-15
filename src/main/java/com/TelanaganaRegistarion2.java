@@ -59,18 +59,20 @@ public class TelanaganaRegistarion2 {
 
 	@Test
 	public void getEC() throws InterruptedException, IOException {
-		System.out.println("**************Test Suite started*********************");
+		System.out.println("**************Test Method started*********************");
 		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));		
 		driver.get("https://registration.telangana.gov.in");
 		System.out.println("**************Site opend*********************");
 		Thread.sleep(5000);
-		String parentwindoww = driver.getWindowHandle();		
-		driver.findElement(By.xpath("/html/body/div[1]/div/div/div[1]/div[2]/div/div/div/div[4]/a")).click();
+		String parentwindoww = driver.getWindowHandle();
 		Thread.sleep(3000);
+		driver.findElement(By.xpath("/html/body/div[1]/div/div/div[1]/div[2]/div/div/div/div[4]/a")).click();
+		Thread.sleep(5000);
 		Set<String> childw = driver.getWindowHandles();
 		for (String childd : childw) {
 			if (!parentwindoww.equalsIgnoreCase(childd)) {
