@@ -68,9 +68,9 @@ public class TelanaganaRegistarion2 {
 		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));		
 		driver.get("https://registration.telangana.gov.in");
 		System.out.println("**************Site opend*********************");
-		Thread.sleep(3000);
+		Thread.sleep(5000);
 		String parentwindoww = driver.getWindowHandle();
-		Thread.sleep(3000);
+		Thread.sleep(2000);
 		driver.findElement(By.xpath("/html/body/div[1]/div/div/div[1]/div[2]/div/div/div/div[4]/a")).click();
 		Thread.sleep(5000);
 		Set<String> childw = driver.getWindowHandles();
@@ -100,7 +100,7 @@ public class TelanaganaRegistarion2 {
 				System.out.println("********************Going to Screenshot***********...");
 				screenShot();
 				System.out.println("********************Going to Mail method***********...");
-				sendEmail();
+				//sendEmail();
 
 			}
 		}
