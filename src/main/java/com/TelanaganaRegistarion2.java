@@ -59,13 +59,14 @@ public class TelanaganaRegistarion2 {
 
 	@Test
 	public void getEC() throws InterruptedException, IOException {
-		System.out.println("Test Suite");
+		System.out.println("**************Test Suite started*********************");
 		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));		
 		driver.get("https://registration.telangana.gov.in");
+		System.out.println("**************Site opend*********************");
 		Thread.sleep(5000);
 		String parentwindoww = driver.getWindowHandle();		
 		driver.findElement(By.xpath("/html/body/div[1]/div/div/div[1]/div[2]/div/div/div/div[4]/a")).click();
@@ -94,8 +95,9 @@ public class TelanaganaRegistarion2 {
 				Thread.sleep(1000);
 				driver.findElement(By.xpath("//button[text()='Submit']")).click();
 				Thread.sleep(3000);
-
+				System.out.println("********************Going to Screenshot***********...");
 				screenShot();
+				System.out.println("********************Going to Mail method***********...");
 				sendEmail();
 
 			}
@@ -166,11 +168,10 @@ public class TelanaganaRegistarion2 {
 			multipart.addBodyPart(messageBodyPart1);
 			multipart.addBodyPart(messageBodyPart2);
 
-			message.setContent(multipart);
-
-			System.out.println("sending...");
+			message.setContent(multipart);			
 			// Send message
 			Transport.send(message);
+			System.out.println("Mail has been sent...");
 			
 		} catch (MessagingException mex) {			
 			mex.printStackTrace();
@@ -186,7 +187,7 @@ public class TelanaganaRegistarion2 {
 		file = new File(System.getProperty("user.dir") + "\\Screenshots\\EC-"+dateName+".png");
 		System.out.println("File path is-->"+file);
 		ImageIO.write(screenshot.getImage(), "png", file);
-		System.out.println("Screenshot taken");
+		System.out.println("*************Screenshot taken*****************");
 		System.out.println("File absolutepath--->"+file.getAbsolutePath());
 		return file.getAbsolutePath();
 		
