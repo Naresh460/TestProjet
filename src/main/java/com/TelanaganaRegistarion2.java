@@ -217,7 +217,7 @@ public class TelanaganaRegistarion2 {
 
 		ITesseract img = new Tesseract();
 		Thread.sleep(2000);
-		img.setDatapath("C:\\Users\\New\\eclipse-workspace\\TestProjet\\tessdata");
+		img.setDatapath("C:/Users/New/eclipse-workspace/TestProjet/tessdata");
 		Thread.sleep(2000);
 		String str = img.doOCR(new File(System.getProperty("user.dir") + "\\Screenshots\\image.png"));
 		driver.switchTo().defaultContent();
