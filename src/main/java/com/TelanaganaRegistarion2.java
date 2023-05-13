@@ -2,6 +2,12 @@ package com;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.net.http.HttpClient;
+import java.net.http.HttpRequest;
+import java.net.http.HttpResponse;
+import java.net.http.HttpResponse.BodyHandlers;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.time.Duration;
@@ -71,7 +77,7 @@ public class TelanaganaRegistarion2 {
 		driver.get("https://registration.telangana.gov.in");
 		System.out.println("**************Site opend*********************");
 		Thread.sleep(5000);
-		
+
 		driver.findElement(By.xpath("/html/body/div[1]/div/div/div[1]/div[2]/div/div/div/div[4]/a")).click();
 		Thread.sleep(3000);
 		WebElement selectelement = driver.findElement(By.id("user_type"));
@@ -80,19 +86,20 @@ public class TelanaganaRegistarion2 {
 		driver.findElement(By.xpath("//input[@id='username']")).sendKeys("9000590085");
 		driver.findElement(By.xpath("//input[@id='password']")).sendKeys("Nari@123");
 		driver.findElement(By.xpath("//input[@id='captcha']")).sendKeys(capthatext());
-		//driver.findElement(By.xpath("//button[@type='submit']")).click();
+		// driver.findElement(By.xpath("//button[@type='submit']")).click();
 		String parentwindoww = driver.getWindowHandle();
 		Thread.sleep(4000);
 		driver.findElement(By.xpath("/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/form[1]/div[7]/a[1]/div[1]")).click();
-		
-		//driver.findElement(By.xpath("//div[contains(text(),'Encumbrance Search(EC)')]")).click();		
+
+		// driver.findElement(By.xpath("//div[contains(text(),'Encumbrance
+		// Search(EC)')]")).click();
 		Set<String> childw = driver.getWindowHandles();
 		for (String childd : childw) {
 			if (!parentwindoww.equalsIgnoreCase(childd)) {
 				// System.out.println(childw);
 				driver.switchTo().window(childd);
 				driver.findElement(By.xpath("//button[@type='button']")).click();
-				
+
 				Thread.sleep(3000);
 				driver.findElement(By.id("doct")).sendKeys("10476");
 				driver.findElement(By.id("regyear")).sendKeys("2021");
@@ -114,6 +121,7 @@ public class TelanaganaRegistarion2 {
 				screenShot();
 				System.out.println("********************Going to Mail method***********...");
 				sendEmail();
+				whatsApp();
 
 			}
 		}
@@ -198,10 +206,10 @@ public class TelanaganaRegistarion2 {
 		Screenshot screenshot = new AShot().shootingStrategy(ShootingStrategies.viewportPasting(1500))
 				.takeScreenshot(driver);
 		file = new File(System.getProperty("user.dir") + "\\Screenshots\\EC-" + dateName + ".png");
-		System.out.println("File path is-->" + file);
+
 		ImageIO.write(screenshot.getImage(), "png", file);
 		System.out.println("*************Screenshot taken*****************");
-		System.out.println("File absolutepath--->" + file.getAbsolutePath());
+
 		return file.getAbsolutePath();
 
 	}
@@ -222,6 +230,25 @@ public class TelanaganaRegistarion2 {
 		String str = img.doOCR(new File(System.getProperty("user.dir") + "\\Screenshots\\image.png"));
 		driver.switchTo().defaultContent();
 		return str;
+	}
+
+	public void whatsApp() {
+		try {
+			HttpRequest request = HttpRequest.newBuilder()
+					.uri(new URI("https://graph.facebook.com/v13.0/102767522824268/messages"))
+					.header("Authorization",
+							"Bearer EAAH0SinfI8IBAM3040xziAumpCCALC6KZCHQXXMSndMmwSjhesdJmPW2ydZCOH6GCusUIfqPuBZAkpJCFbF9YCt5ieBh4RaRkCDWiKHO10lbTUZBZCZCBwLgdZAa9xPZAAnbm2l0jNA1T3YyCpFkHktaNKUhZCiMfd0BPUNUdQ6GydkW3yRmtjZABoI5eg4Ecb1wav9QByEeYWilRwofiRoZAvrZCClI1Mcu3oWo1gtv1Aa64wZDZD")
+					.header("Content-Type", "application/json")
+					.POST(HttpRequest.BodyPublishers.ofString(
+							"{ \"messaging_product\": \"whatsapp\", \"recipient_type\": \"individual\", \"to\": \"<+919000590085>\", \"type\": \"template\", \"template\": { \"name\": \"hello_world\", \"language\": { \"code\": \"en_US\" } } }"))
+					.build();
+			HttpClient http = HttpClient.newHttpClient();
+			HttpResponse<String> response = http.send(request, BodyHandlers.ofString());
+			System.out.println(response.body());
+
+		} catch (URISyntaxException | IOException | InterruptedException e) {
+			e.printStackTrace();
+		}
 	}
 
 }
