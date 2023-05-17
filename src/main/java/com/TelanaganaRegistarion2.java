@@ -2,12 +2,6 @@ package com;
 
 import java.io.File;
 import java.io.IOException;
-import java.net.URI;
-import java.net.URISyntaxException;
-import java.net.http.HttpClient;
-import java.net.http.HttpRequest;
-import java.net.http.HttpResponse;
-import java.net.http.HttpResponse.BodyHandlers;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.time.Duration;
@@ -121,7 +115,7 @@ public class TelanaganaRegistarion2 {
 				screenShot();
 				System.out.println("********************Going to Mail method***********...");
 				sendEmail();
-				whatsApp();
+				//whatsApp();
 
 			}
 		}
@@ -232,23 +226,23 @@ public class TelanaganaRegistarion2 {
 		return str;
 	}
 
-	public void whatsApp() {
-		try {
-			HttpRequest request = HttpRequest.newBuilder()
-					.uri(new URI("https://graph.facebook.com/v13.0/102767522824268/messages"))
-					.header("Authorization",
-							"Bearer EAAH0SinfI8IBAM3040xziAumpCCALC6KZCHQXXMSndMmwSjhesdJmPW2ydZCOH6GCusUIfqPuBZAkpJCFbF9YCt5ieBh4RaRkCDWiKHO10lbTUZBZCZCBwLgdZAa9xPZAAnbm2l0jNA1T3YyCpFkHktaNKUhZCiMfd0BPUNUdQ6GydkW3yRmtjZABoI5eg4Ecb1wav9QByEeYWilRwofiRoZAvrZCClI1Mcu3oWo1gtv1Aa64wZDZD")
-					.header("Content-Type", "application/json")
-					.POST(HttpRequest.BodyPublishers.ofString(
-							"{ \"messaging_product\": \"whatsapp\", \"recipient_type\": \"individual\", \"to\": \"<+919000590085>\", \"type\": \"template\", \"template\": { \"name\": \"hello_world\", \"language\": { \"code\": \"en_US\" } } }"))
-					.build();
-			HttpClient http = HttpClient.newHttpClient();
-			HttpResponse<String> response = http.send(request, BodyHandlers.ofString());
-			System.out.println(response.body());
-
-		} catch (URISyntaxException | IOException | InterruptedException e) {
-			e.printStackTrace();
-		}
-	}
+//	public void whatsApp() {
+//		try {
+//			HttpRequest request = HttpRequest.newBuilder()
+//					.uri(new URI("https://graph.facebook.com/v13.0/102767522824268/messages"))
+//					.header("Authorization",
+//							"Bearer EAAH0SinfI8IBAM3040xziAumpCCALC6KZCHQXXMSndMmwSjhesdJmPW2ydZCOH6GCusUIfqPuBZAkpJCFbF9YCt5ieBh4RaRkCDWiKHO10lbTUZBZCZCBwLgdZAa9xPZAAnbm2l0jNA1T3YyCpFkHktaNKUhZCiMfd0BPUNUdQ6GydkW3yRmtjZABoI5eg4Ecb1wav9QByEeYWilRwofiRoZAvrZCClI1Mcu3oWo1gtv1Aa64wZDZD")
+//					.header("Content-Type", "application/json")
+//					.POST(HttpRequest.BodyPublishers.ofString(
+//							"{ \"messaging_product\": \"whatsapp\", \"recipient_type\": \"individual\", \"to\": \"<+919000590085>\", \"type\": \"template\", \"template\": { \"name\": \"hello_world\", \"language\": { \"code\": \"en_US\" } } }"))
+//					.build();
+//			HttpClient http = HttpClient.newHttpClient();
+//			HttpResponse<String> response = http.send(request, BodyHandlers.ofString());
+//			System.out.println(response.body());
+//
+//		} catch (URISyntaxException | IOException | InterruptedException e) {
+//			e.printStackTrace();
+//		}
+//	}
 
 }
