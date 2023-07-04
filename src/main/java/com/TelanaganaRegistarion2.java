@@ -209,9 +209,10 @@ public class TelanaganaRegistarion2 {
 	}
 
 	public String capthatext() throws IOException, InterruptedException, TesseractException {
-		driver.switchTo().frame("frame1");
+		//driver.switchTo().frame("frame1");
+		System.out.println("**********Before Capha******");
 		WebElement element = driver
-				.findElement(By.xpath("//img[@src='https://registration.telangana.gov.in/Captcha.jpg']//parent::body"));
+				.findElement(By.xpath("//img[@src='/Captcha.jpg']"));
 
 		File src = element.getScreenshotAs(OutputType.FILE);
 
@@ -220,9 +221,11 @@ public class TelanaganaRegistarion2 {
 		ITesseract img = new Tesseract();
 		Thread.sleep(2000);
 		img.setDatapath(System.getProperty("user.dir") + "\\tessdata");
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 		String str = img.doOCR(new File(System.getProperty("user.dir") + "\\Screenshots\\image.png"));
-		driver.switchTo().defaultContent();
+		System.out.println("Captcha is--->"+str);
+		Thread.sleep(2000);
+		//driver.switchTo().defaultContent();
 		return str;
 	}
 
