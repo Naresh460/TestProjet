@@ -6,12 +6,12 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.TelanaganaRegistarion2">
+      <class name="com.TelanaganaRegistarion3">
         <methods>
-          <include name="tearDDown"/>
           <include name="getEC"/>
+          <include name="tearDDown"/>
         </methods>
-      </class> <!-- com.TelanaganaRegistarion2 -->
+      </class> <!-- com.TelanaganaRegistarion3 -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
