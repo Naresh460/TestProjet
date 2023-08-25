@@ -125,8 +125,7 @@ public class TelanaganaRegistarion3 {
 				screenShot();
 				System.out.println("********************Going to Mail method***********...");
 				sendEmail();
-				dropBoxupload();
-
+				
 			}
 		}
 
@@ -239,36 +238,6 @@ public class TelanaganaRegistarion3 {
 		return str;
 	}
 	
-	public void dropBoxupload() throws DbxException, IOException {
-		final String ACCESS_TOKEN = "sl.BjUOFEBWgQUVQ-I_qjmtO5QLYZAFCQeTDxLCdYWlwH_3G8w5LD2ihGlrJaL-u2vvbUsetors2CkIeopKhViCa8yOzCmkbirlsFfjUUAJ84Ejke0v7uCHmnQ_CvWcUi2hwuveYNHXl27E9QFM5cY4mqU";
-
-		
-			DbxRequestConfig config = DbxRequestConfig.newBuilder("upload_naresh").build();
-	        DbxClientV2 client = new DbxClientV2(config, ACCESS_TOKEN);
-	        
-	        System.out.println("Access success");
-	        
-	        // Specify the path on Dropbox where you want to upload the file
-	        String dropboxPath = "/2/files/upload/EC-" + dateName + ".png";
-	        System.out.println("Dropbox path success");
-	        // Specify the local file path to upload
-	        String localFilePath = screenShot();
-	        System.out.println("Localpath sucess");
-	        try (InputStream in = new FileInputStream(localFilePath)) {
-	            // Upload the file
-	            CommitInfo commitInfo = CommitInfo.newBuilder(dropboxPath).build();
-	            FileMetadata metadata = client.files().uploadBuilder(dropboxPath)
-	                    .withMode(WriteMode.ADD)
-	                    .uploadAndFinish(in);
-	            
-	            System.out.println("File uploaded successfully. Metadata: " + metadata.toString());
-	        } catch (UploadErrorException e) {
-	            System.err.println("Error uploading the file to Dropbox: " + e.getMessage());
-	        } catch (IOException e) {
-	            System.err.println("Error reading the local file: " + e.getMessage());
-	        }
-		
-	}
 	
 	
 

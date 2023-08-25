@@ -154,17 +154,29 @@
                   <a name="getEC">
                   </a> <!-- getEC -->
                   <span class="method-name">getEC</span>
-                  <div class="stack-trace">com.dropbox.core.InvalidAccessTokenException: 
-	at com.dropbox.core.DbxRequestUtil.unexpectedStatus(DbxRequestUtil.java:342)
-	at com.dropbox.core.DbxRequestUtil.unexpectedStatus(DbxRequestUtil.java:324)
-	at com.dropbox.core.DbxUploader.finish(DbxUploader.java:290)
-	at com.dropbox.core.DbxUploader.uploadAndFinish(DbxUploader.java:126)
-	at com.dropbox.core.DbxUploader.uploadAndFinish(DbxUploader.java:96)
-	at com.dropbox.core.v2.DbxUploadStyleBuilder.uploadAndFinish(DbxUploadStyleBuilder.java:92)
-	at com.TelanaganaRegistarion3.dropBoxupload(TelanaganaRegistarion3.java:262)
-	at com.TelanaganaRegistarion3.getEC(TelanaganaRegistarion3.java:128)
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/form[1]/div[7]/a[1]/div[1]&quot;}
+  (Session info: chrome=116.0.5845.97)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.15.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [1f7eafef38aa2cdec423be38c4312cb0, findElement {using=xpath, value=/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/form[1]/div[7]/a[1]/div[1]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 116.0.5845.97, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: C:\Users\New\AppData\Local\...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:13890}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:13890/devtoo..., se:cdpVersion: 116.0.5845.97, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 1f7eafef38aa2cdec423be38c4312cb0
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at com.TelanaganaRegistarion3.getEC(TelanaganaRegistarion3.java:96)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-... Removed 27 stack frames
+... Removed 31 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -181,65 +193,15 @@
                   <a name="getEC">
                   </a> <!-- getEC -->
                   <span class="method-name">getEC</span>
-                  <div class="stack-trace">com.dropbox.core.InvalidAccessTokenException: 
-	at com.dropbox.core.DbxRequestUtil.unexpectedStatus(DbxRequestUtil.java:342)
-	at com.dropbox.core.DbxRequestUtil.unexpectedStatus(DbxRequestUtil.java:324)
-	at com.dropbox.core.DbxUploader.finish(DbxUploader.java:290)
-	at com.dropbox.core.DbxUploader.uploadAndFinish(DbxUploader.java:126)
-	at com.dropbox.core.DbxUploader.uploadAndFinish(DbxUploader.java:96)
-	at com.dropbox.core.v2.DbxUploadStyleBuilder.uploadAndFinish(DbxUploadStyleBuilder.java:92)
-	at com.TelanaganaRegistarion3.dropBoxupload(TelanaganaRegistarion3.java:262)
-	at com.TelanaganaRegistarion3.getEC(TelanaganaRegistarion3.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-... Removed 27 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="getEC">
-                  </a> <!-- getEC -->
-                  <span class="method-name">getEC</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#doct&quot;}
-  (Session info: chrome=116.0.5845.96)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.15.1&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [dbb68c95771ff924568b8b79d3a3453b, findElement {using=id, value=doct}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 116.0.5845.96, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: C:\Users\New\AppData\Local\...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:6305}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:6305/devtool..., se:cdpVersion: 116.0.5845.96, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: dbb68c95771ff924568b8b79d3a3453b
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
-	at com.TelanaganaRegistarion3.getEC(TelanaganaRegistarion3.java:108)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-... Removed 31 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="getEC">
-                  </a> <!-- getEC -->
-                  <span class="method-name">getEC</span>
                   <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/form[1]/div[7]/a[1]/div[1]&quot;}
-  (Session info: chrome=116.0.5845.96)
+  (Session info: chrome=116.0.5845.97)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.15.1&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [537dfb5a563a8405afb1ce1b728ee470, findElement {using=xpath, value=/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/form[1]/div[7]/a[1]/div[1]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 116.0.5845.96, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: C:\Users\New\AppData\Local\...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:6335}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:6335/devtool..., se:cdpVersion: 116.0.5845.96, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 537dfb5a563a8405afb1ce1b728ee470
+Command: [17ac179aa17623c452fad99da8c6f708, findElement {using=xpath, value=/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/form[1]/div[7]/a[1]/div[1]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 116.0.5845.97, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: C:\Users\New\AppData\Local\...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:13806}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:13806/devtoo..., se:cdpVersion: 116.0.5845.97, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 17ac179aa17623c452fad99da8c6f708
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
@@ -254,6 +216,56 @@ Session ID: 537dfb5a563a8405afb1ce1b728ee470
 	at com.TelanaganaRegistarion3.getEC(TelanaganaRegistarion3.java:96)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
 ... Removed 31 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="getEC">
+                  </a> <!-- getEC -->
+                  <span class="method-name">getEC</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/form[1]/div[7]/a[1]/div[1]&quot;}
+  (Session info: chrome=116.0.5845.97)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.15.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [a3704873f90030cea7015488848fb156, findElement {using=xpath, value=/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/form[1]/div[7]/a[1]/div[1]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 116.0.5845.97, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: C:\Users\New\AppData\Local\...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:13831}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:13831/devtoo..., se:cdpVersion: 116.0.5845.97, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: a3704873f90030cea7015488848fb156
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at com.TelanaganaRegistarion3.getEC(TelanaganaRegistarion3.java:96)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+... Removed 31 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="getEC">
+                  </a> <!-- getEC -->
+                  <span class="method-name">getEC</span>
+                  <div class="stack-trace">com.dropbox.core.InvalidAccessTokenException: 
+	at com.dropbox.core.DbxRequestUtil.unexpectedStatus(DbxRequestUtil.java:342)
+	at com.dropbox.core.DbxRequestUtil.unexpectedStatus(DbxRequestUtil.java:324)
+	at com.dropbox.core.DbxUploader.finish(DbxUploader.java:290)
+	at com.dropbox.core.DbxUploader.uploadAndFinish(DbxUploader.java:126)
+	at com.dropbox.core.DbxUploader.uploadAndFinish(DbxUploader.java:96)
+	at com.dropbox.core.v2.DbxUploadStyleBuilder.uploadAndFinish(DbxUploadStyleBuilder.java:92)
+	at com.TelanaganaRegistarion3.dropBoxupload(TelanaganaRegistarion3.java:262)
+	at com.TelanaganaRegistarion3.getEC(TelanaganaRegistarion3.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+... Removed 27 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -318,24 +330,24 @@ data.addRows(4);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'getEC')
 data.setCell(0, 2, 'com.TelanaganaRegistarion3')
-data.setCell(0, 3, 74738);
+data.setCell(0, 3, 70366);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'getEC')
 data.setCell(1, 2, 'com.TelanaganaRegistarion3')
-data.setCell(1, 3, 71769);
+data.setCell(1, 3, 49440);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'getEC')
 data.setCell(2, 2, 'com.TelanaganaRegistarion3')
-data.setCell(2, 3, 60742);
+data.setCell(2, 3, 45621);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'getEC')
 data.setCell(3, 2, 'com.TelanaganaRegistarion3')
-data.setCell(3, 3, 44994);
+data.setCell(3, 3, 44641);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 4 minutes</span>
+              <span class="suite-total-time">Total running time: 3 minutes</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -368,33 +380,33 @@ return data;
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDDown</span>
-                <span class="method-start">60754 ms</span>
+                <span class="method-start">49459 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <span class="method-name">getEC</span>
-                <span class="method-start">61540 ms</span>
+                <span class="method-start">50200 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDDown</span>
-                <span class="method-start">106542 ms</span>
+                <span class="method-start">94853 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <span class="method-name">getEC</span>
-                <span class="method-start">107206 ms</span>
+                <span class="method-start">95577 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDDown</span>
-                <span class="method-start">181953 ms</span>
+                <span class="method-start">165948 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">getEC</span>
-                <span class="method-start">182679 ms</span>
+                <span class="method-start">166671 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDDown</span>
-                <span class="method-start">254455 ms</span>
+                <span class="method-start">212300 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
