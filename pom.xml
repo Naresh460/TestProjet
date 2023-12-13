@@ -20,6 +20,12 @@
 			<artifactId>poi</artifactId>
 			<version>5.2.5</version>
 		</dependency>
+<!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
+<dependency>
+    <groupId>org.apache.poi</groupId>
+    <artifactId>poi-ooxml</artifactId>
+    <version>5.2.5</version>
+</dependency>
 
 		<dependency>
 			<groupId>commons-io</groupId>
@@ -86,11 +92,7 @@
 			<artifactId>ashot</artifactId>
 			<version>1.5.4</version>
 		</dependency>
-		<dependency>
-			<groupId>com.application.automation</groupId>
-			<artifactId>VIDA_AUTOMATION</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
+		
 	</dependencies>
 	<build>
 		<plugins>
