@@ -38,13 +38,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 
-import com.dropbox.core.DbxException;
-import com.dropbox.core.DbxRequestConfig;
-import com.dropbox.core.v2.DbxClientV2;
-import com.dropbox.core.v2.files.CommitInfo;
-import com.dropbox.core.v2.files.FileMetadata;
-import com.dropbox.core.v2.files.UploadErrorException;
-import com.dropbox.core.v2.files.WriteMode;
+
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import net.sourceforge.tess4j.ITesseract;
@@ -68,7 +62,7 @@ public class TelanaganaRegistarion3 {
 	}
 
 	@Test
-	public void getEC() throws InterruptedException, IOException, TesseractException, DbxException {
+	public void getEC() throws InterruptedException, IOException, TesseractException {
 		System.out.println("**************Test Method started*********************");
 //		WebDriverManager.chromedriver().setup();
 //		ChromeOptions options = new ChromeOptions();
