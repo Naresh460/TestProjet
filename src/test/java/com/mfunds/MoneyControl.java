@@ -18,17 +18,19 @@ public class MoneyControl {
 	public static void main(String[] args) throws InterruptedException, IOException {
 		
 	getData("https://www.moneycontrol.com/mutual-funds/nav/uti-nifty200-momentum-30-index-fund-direct-plan-growth/MUT3614",0);
-	getData("https://www.moneycontrol.com/mutual-funds/nav/icici-prudential-bharat-22-fof-direct-plan-growth/MPI3793",1);
-	getData("https://www.moneycontrol.com/mutual-funds/nav/quant-small-cap-fund-direct-plan-growth/MES056",2);
-	getData("https://www.moneycontrol.com/mutual-funds/nav/sbi-nifty-smallcap-250-index-fund-regular-plan-growth/MSB1869",3);
-	getData("https://www.moneycontrol.com/mutual-funds/nav/icici-prudential-smallcap-fund-direct-plan-growth/MPI1146",4);
+//	getData("https://www.moneycontrol.com/mutual-funds/nav/icici-prudential-bharat-22-fof-direct-plan-growth/MPI3793",1);
+//	getData("https://www.moneycontrol.com/mutual-funds/nav/quant-small-cap-fund-direct-plan-growth/MES056",2);
+//	getData("https://www.moneycontrol.com/mutual-funds/nav/sbi-nifty-smallcap-250-index-fund-regular-plan-growth/MSB1869",3);
+//	getData("https://www.moneycontrol.com/mutual-funds/nav/icici-prudential-smallcap-fund-direct-plan-growth/MPI1146",4);
 
 	}
 	
 	public static void getData(String url,int sheetindex) throws InterruptedException, IOException {
 		WebDriver driver = new ChromeDriver();
+		driver.manage().deleteAllCookies();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		
 		driver.get(url);
 		Thread.sleep(3000);
 		
@@ -38,7 +40,7 @@ public class MoneyControl {
 					.replaceFirst("\\W", "").trim();
 			
 			String change = driver.findElement(By.xpath("//div[@class='leftblok']/span[@class='amt']/following-sibling::span")).getText()
-					.replaceFirst("\\W", "").trim();
+					.trim();
 			
 			String date = driver.findElement(By.xpath("//div[@class='leftblok']/span[@class='amt']/following-sibling::div")).getText()
 					.replaceFirst("\\W", "").trim();
