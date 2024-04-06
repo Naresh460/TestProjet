@@ -63,15 +63,15 @@ public class TelanaganaRegistarion3 {
 
 	@Test
 	public void getEC() throws InterruptedException, IOException, TesseractException {
-		System.out.println("**************Test Method started*********************");
+		System.out.println("**************Browser initiating*********************");
 //		WebDriverManager.chromedriver().setup();
 //		ChromeOptions options = new ChromeOptions();
 //		options.addArguments("--remote-allow-origins=*");
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
-		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
 		driver.get("https://registration.telangana.gov.in");
 		System.out.println("**************Site opend*********************");
 		Thread.sleep(5000);
@@ -105,14 +105,14 @@ public class TelanaganaRegistarion3 {
 				Thread.sleep(2000);
 				driver.findElement(By.xpath("//*[@id=\"ui-id-1\"]/li")).click();
 				Thread.sleep(2000);
-				driver.findElement(By.xpath("//div[@id=\"docno\"]/div[4]/button")).click();
+				driver.findElement(By.xpath("//button[@type='submit']")).click();
 				Thread.sleep(2000);
-				driver.findElement(By.xpath("//button[@class='btn']")).click();
-				Thread.sleep(5000);
-				driver.findElement(By.xpath("//*[@id=\"bean\"]/div[3]/div[13]/button[1]")).click();
+				driver.findElement(By.xpath("//button[normalize-space()='Next']")).click();
+			Thread.sleep(5000);
+				driver.findElement(By.xpath("//button[@type='submit']")).click();
 				Thread.sleep(3000);
 				driver.findElement(By.id("checkall2")).click();
-				Thread.sleep(1000);
+				Thread.sleep(2000);
 				driver.findElement(By.xpath("//button[text()='Submit']")).click();
 				Thread.sleep(3000);
 				System.out.println("********************Going to Screenshot***********...");

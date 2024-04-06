@@ -6,8 +6,7 @@
 	<artifactId>TestProjet</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<repositories>
-		
-	<repository>
+		<repository>
   <id>bluebird460</id>
   <url>https://pkgs.dev.azure.com/bluebird460/_packaging/bluebird460/maven/v1</url>
   <releases>
@@ -17,7 +16,8 @@
     <enabled>true</enabled>
   </snapshots>
 </repository>
-</repositories>
+	</repositories>
+
 <distributionManagement>
 	<repository>
   <id>bluebird460</id>
@@ -119,6 +119,14 @@
 	</dependencies>
 	<build>
 		<plugins>
+			<plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-deploy-plugin</artifactId>
+            <version>2.7</version>
+            <configuration>
+                <!-- Configuration if needed -->
+            </configuration>
+        </plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-release-plugin</artifactId>
